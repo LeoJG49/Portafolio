@@ -7,6 +7,7 @@
 :root {
     --primary-bg: #365e47;
     --secundary-bg: #342550;
+    --tertiary-bg: #000000;
     --large-font-size: 1.8rem;
     --normal-font-size: 1rem;
     --medium-font-size: .8rem;
@@ -53,6 +54,7 @@ header {
     background-color: rgba(0, 0, 0, .5);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px 1px #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,26 +109,87 @@ header {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    background-color: antiquewhite;
+    /* -webkit-backdrop-filter: blur(5px);
+    mask-image: linear-gradient(to bottom, black 95%, transparent 100%); */
 
     .text-container {
         width: 45%;
         height: 80%;
         position: relative;
-        border: 1px solid #000;
-        background-color: rgba(0, 0, 0, .5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
+        border-radius: 20px;
+        background: linear-gradient(45deg, #3a654c, #315540);
+        box-shadow:  10px -10px 20px #294736,
+             -10px 10px 20px #437558;
+        /* -webkit-animation: scale-in-hor-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	    animation: scale-in-hor-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
+
+            .title-container, .paragraph-container {
+                width: 70%;
+                padding: 10px;
+                color: var(--primary-text-color);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .title {
+                margin-bottom: 30px;
+                display: inline-block;
+                white-space: nowrap;
+                overflow: hidden;
+                border-right: 0.3em solid green;
+                /* -webkit-animation: 
+                typeAndDelete 4s steps(18) infinite,
+                blinkCursor 0.5s step-end infinite alternate;
+                animation:
+                typeAndDelete 4s steps(18) infinite,
+                blinkCursor 0.5s step-end infinite alternate; */
+            }
+
+
+    
     }
 
     .image-container {
         width: 45%;
         height: 80%;
         position: relative;
-        border: 1px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         background-color: rgba(0, 0, 0, .5);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
+        border-radius: 20px;
+        background: linear-gradient(315deg, #3a654c, #315540);
+        box-shadow:  -10px -10px 20px #294736,
+             10px 10px 20px #437558;
+        /* -webkit-animation: scale-in-hor-right 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	    animation: scale-in-hor-right 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
+                .image-section {
+                    width: 45%;
+                    height: 75%;
+                    border-radius: 10px;
+                    background: linear-gradient(315deg, #3a654c, #315540);
+                    box-shadow:  -10px -10px 20px #294736,
+                    10px 10px 20px #437558;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            background-repeat: no-repeat;
+                            object-fit: cover;
+                        }
+                }
     }
 }
 
@@ -137,13 +200,14 @@ header {
     width: 100%;
     height: 180vh;
     position: relative;
-    background-color: #fff;
+    background-color: var(--primary-bg);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    
 
         .wrapper-container {
             width: 80%;
@@ -152,20 +216,73 @@ header {
             border: 1px solid #000;
         }
 
-        .skills-container {
+        .skill-container {
             width: 90%;
-            height: 40%;
+            height: 50%;
             position: relative;
             border: 1px solid #000;
         }
 
         .form-container {
             width: 90%;
-            height: 50%;
+            height: 40%;
             position: relative;
             border: 1px solid #000;
         }
 }
+
+/*Wrapp Section Style*/
+
+
+/*Skill Section Style*/
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #342550;
+
+        .skill-title {
+            color: var(--primary-text-color);
+            font-size: var(--large-font-size);
+        }
+}
+
+.skills-section-container {
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+
+        .skill-card {
+            width: 30%;
+            height: 30%;
+            gap: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: blue;
+            margin-right: 15px ;
+        }
+}
+
+.skills-image-container {
+    background-color: beige;
+        img {
+            width: 150px;
+            height: 200px;
+        }
+}
+
+/*Form Section Style*/
+
+
 
 /*Footer Style*/
 
@@ -173,4 +290,127 @@ footer {
     width: 100%;
     height: 30vh;
     background-color: #342550;
+}
+
+
+
+
+
+/*Animations*/
+
+
+/*Text Blinking*/
+
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typeAndDelete {
+  0%,
+  10% {
+    width: 0;
+  }
+  45%,
+  55% {
+    width: 9em;
+  } /* adjust width based on content */
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2025-10-22 17:17:34
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-in-hor-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-in-hor-left {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-hor-left {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2025-10-22 17:19:13
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-in-hor-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-in-hor-right {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-hor-right {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+  }
 }
