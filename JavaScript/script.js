@@ -1,2 +1,3 @@
-import './dinamic-header.js'
-import './fade-in-container.js'
+import './dinamicHeader.js'
+import './fadeInContainer.js'
+import './infiniteScrollAnimation.js'
