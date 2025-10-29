@@ -1,6 +1,4 @@
 import './dinamicHeader.js'
 import './fadeInContainer.js'
-import './infiniteScrollAnimation.js'
-import './footerTextAnimation.js'
 import './gsapAnimations.js'
-import './carouselGSAP.js'
+import './footerTextHoverAnimation.js'
