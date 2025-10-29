@@ -16,7 +16,7 @@
     --primary-bg: #0f0f0f;
     --secundary-bg: #342550;
     --tertiary-bg: #979797;
-    --large-font-size: 1.8rem;
+    --large-font-size: 2rem;
     --normal-font-size: 1rem;
     --medium-font-size: .8rem;
     --tity-font-size: .5rem;
@@ -179,6 +179,7 @@ header {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
+    font-size: var(--large-font-size);
     border-right: 0.3em solid green;
     -webkit-animation: 
     typeAndDelete 4s steps(18) infinite,
@@ -186,6 +187,10 @@ header {
     animation:
     typeAndDelete 4s steps(18) infinite,
     blinkCursor 0.5s step-end infinite alternate;
+}
+
+.paragraph {
+  font-size: var(--large-font-size);
 }
 
 .image-section {
@@ -220,8 +225,8 @@ header {
     padding: 20px;
 
         .wrapper-container {
-            width: 95%;
-            max-width: 95%;
+            width: 90%;
+            max-width: 90%;
             height: 8%;
             padding: 20px 0;
             position: relative;
@@ -273,10 +278,12 @@ header {
 }
 
 .scroll-track {
+  width: max-content;
   display: flex;
-  gap: 60px;
+  gap: 180px;
   will-change: transform;
   position: relative;
+  animation: carousel 10s linear infinite;
 }
 
 .items {
@@ -298,24 +305,6 @@ header {
   transform: scale(1.1);
   cursor: pointer;
 }
-/* 
-.wrapper-animation {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  left: max(100px * 6), 100%;
-  animation: scrollInfinite 20s linear infinite;
-  cursor: pointer;
-} */
-
-.item1 {animation-delay: calc(20s / 6 * (6 - 1) * -1);}
-.item2 {animation-delay: calc(20s / 6 * (6 - 2) * -1);}
-.item3 {animation-delay: calc(20s / 6 * (6 - 3) * -1);}
-.item4 {animation-delay: calc(20s / 6 * (6 - 4) * -1);}
-.item5 {animation-delay: calc(20s / 6 * (6 - 5) * -1);}
-.item6 {animation-delay: calc(20s / 6 * (6 - 6) * -1);}
-
-
 
 /*Skill Section Style*/
 .skill-container {
@@ -552,20 +541,6 @@ footer {
 .author {
   font-size: var(--large-font-size);
   margin-left: 20px;
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: opacity 3s ease-in-out, transform 1.4s ease-in-out;
-  -webkit-animation: text-shadow-pop-tr 0.6s both;
-	animation: text-shadow-pop-tr 0.6s both;
-  animation-timeline: view();
-  animation-range: entry 0% cover 15%;
-  -webkit-animation-delay: 1,5s;
-  animation-delay: 1.5s;
-
-    &.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
 }
 
 
@@ -592,9 +567,9 @@ footer {
 /*Animations*/
 
 /*Wrapper Animation*/
-@keyframes scrollInfiniteFlex {
+@keyframes carousel{
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    100% { transform: translateX(-34.475%); }
 }
 
 /*Text Blinking*/
