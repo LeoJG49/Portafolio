@@ -34,8 +34,8 @@ text.lines.forEach((word, index) => {
 
     textAnimationTL.from(word, {
         y: 200,
-        duration: 1.2,
-        delay: index * .4,
+        duration: 1.5,
+        delay: index * .3,
         ease: "back.inOut",
         opacity: 0,
         stagger: .3,
@@ -47,7 +47,7 @@ text.words.forEach((char, index) => {
     gsap.from(char, {
         y: 200,
         duration: 1,
-        delay: index * .02,
+        delay: index * .05,
         ease: "back.in",
         opacity: 0,
     })

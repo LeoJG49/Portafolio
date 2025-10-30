@@ -283,7 +283,7 @@ header {
   gap: 180px;
   will-change: transform;
   position: relative;
-  animation: carousel 10s linear infinite;
+  animation: carousel 20s linear infinite;
 }
 
 .items {
