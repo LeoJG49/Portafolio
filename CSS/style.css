@@ -283,7 +283,7 @@ header {
   gap: 180px;
   will-change: transform;
   position: relative;
-  animation: carousel 10s linear infinite;
+  animation: carousel 20s linear infinite;
 }
 
 .items {
@@ -311,9 +311,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    opacity: 0;
-    transform: translateX(-300px);
-    transition: opacity 1.4s ease-in-out, transform 1.4s ease-in-out;
+    /* opacity: 0;
+    transform: translateX(-300px); */
         .skill-title {
             color: var(--primary-text-color);
             font-size: var(--large-font-size);
@@ -323,10 +322,10 @@ header {
 }
 
 /*Fade In container*/
-.skill-container.visible {
+/* .skill-container.visible {
     opacity: 1;
     transform: translateX(0);
-}
+} */
 
 .skills-section-container {
     width: 100%;
