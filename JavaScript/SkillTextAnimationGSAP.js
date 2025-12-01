@@ -1,26 +1,31 @@
 //Main Text Animation
-gsap.registerPlugin(SplitText)
+gsap.registerPlugin(ScrollTrigger)
 
 document.fonts.ready.then(() => {
-    gsap.set(".skill-title", { opacity: 1});
+    gsap.set(".skill-title", { 
+        opacity: 1,
+    });
 
     let split;
     SplitText.create(".skill-title", {
-        type: "words",
+        type: "words, lines",
         wordsClass: "word",
         linesClass: "line",
         autoSplit: true,
-        mask: "words",
+        mask: "lines",
         onSplit: (self) => {
-            split = gsap.from(self.words, {
-                delay: .5,
-                y: 100,
+            split = gsap.from(self.lines, {
+                y: 115,
                 duration: 1,
                 opacity: 0,
                 stagger: .1,
-                ease: "power4.out",
+                scrollTrigger: {
+                    trigger: ".skill-title",
+                    scrub: 1,
+                    start: "top 80%",
+                }
             })
             return split;
         }
-    })
+    }, 200)
 })
