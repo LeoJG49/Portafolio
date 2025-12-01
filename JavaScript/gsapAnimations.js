@@ -20,6 +20,7 @@ gsap.from(".objects", {
     delay: .3,
     ease: "bounce",
     stagger: .25,
+<<<<<<< HEAD
 })
 
 
@@ -51,4 +52,6 @@ text.words.forEach((char, index) => {
         ease: "back.in",
         opacity: 0,
     })
+=======
+>>>>>>> GSAPBranch
 })

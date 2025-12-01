@@ -7,18 +7,17 @@
     <link rel="stylesheet" href="/CSS/style.css">
     <meta name="description" content="Leo's Portfolio - Web Developer">
     <meta name="keywords" content="Portfolio, Web Developer, HTML, CSS, JavaScript">
+    <!--GSAP-->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Draggable.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/EaselPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Observer.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/PhysicsPropsPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <!--End GSAP-->
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://unpkg.com/lenis@1.3.14/dist/lenis.min.js"></script>
     <script defer type="module" src="/JavaScript/script.js"></script>
 </head>
 <body>
@@ -27,17 +26,21 @@
     <header>
         <nav class="head-nav" id="dinamic-header">
             <a href="" class="head-link">
-            <h2 class="nav-title">Leo</h2>
+            <h2 class="nav-title">
+                <span>
+                    Leo
+                </span>
+            </h2>
             </a>
             <ul class="nav-options">
                 <div class="objects">
                     <a href="#" id="know-me">
-                    <li class="about-section">About Me</li>
+                    <li class="about-section">Technologies</li>
                     </a>
                 </div>
                 <div class="objects">
                     <a href="#" id="skills">
-                        <li class="technologies-section">Technologies</li>
+                        <li class="technologies-section">Proyects</li>
                     </a>
                 </div>
                 <div class="objects">
@@ -60,10 +63,12 @@
             </div>
             <div class="paragraph-container">
                 <p class="paragraph">
-                    Hi! I am a web developer who wants to know the most impressive ways to create websites
-                    with GSAP and JavaScript. <br>
-                    I've been doing this since 2023 until today! <br>
-                    I hope you enjoy going through my portfolio.
+                    <span>
+                        Hi! I am a web developer who wants to know the most impressive ways to create websites
+                        with GSAP and JavaScript. <br>
+                        I've been doing this since 2023 until today! <br>
+                        I hope you enjoy going through my portfolio.
+                    </span>
                 </p>
             </div>
         </div>
@@ -167,141 +172,47 @@
             </div>
         </section>
 
+        <section class="skill-title-container">
+            <h2 class="skill-title">
+                <span>
+                    Skills
+                </span>
+            </h2>
+        </section>
+        
         <section class="skill-container" id="skill-section">
-
-            <div class="skill-title">
-                <h2>Skills</h2>
-            </div>
-
-            <div class="skills-section-container">
-                <div class="skill-card">
-                    <div class="skills-image-container">
-                        <img src="/Images/OptimazedImages/Me.webp" alt="HTML Skill" fetchpriority="low" loading="lazy">
-                    </div>
-                    <div class="skill-description-container">
-                        <h3>
-                            Hola
-                        </h3>
-                        <div class="skill-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium distinctio optio mollitia blanditiis magnam consectetur sint itaque eligendi unde quos? Doloribus eius ut quas nihil impedit itaque minima facilis quasi!
+                <section class="card pinned">
+                    <div class="skill-card">
+                        <div class="skills-image-container">
+                            <img src="/Images/OptimazedImages/Me.webp" alt="HTML Skill" fetchpriority="low" loading="lazy">
+                        </div>
+                        <div class="skill-description-container">
+                            <h3>
+                                Hola
+                            </h3>
+                            <div class="skill-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste labore rerum odit quae ipsum, repellendus placeat explicabo dolore aperiam quo!
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="skill-card">
-                    <div class="skills-image-container">
-                        <img src="/Images/OptimazedImages/Me.webp" alt="HTML Skill" fetchpriority="low" loading="lazy">
-                    </div>
-
-                    <div class="skill-description-container">
-                        <h3>
-                            Hola
-                        </h3>
-                        <div class="skill-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium distinctio optio mollitia blanditiis magnam consectetur sint itaque eligendi unde quos? Doloribus eius ut quas nihil impedit itaque minima facilis quasi!
+                <section class="card scroll">
+                    <div class="skill-card">
+                        <div class="skills-image-container">
+                            <img src="/Images/OptimazedImages/Me.webp" alt="HTML Skill" fetchpriority="low" loading="lazy">
+                        </div>
+    
+                        <div class="skill-description-container">
+                            <h3>
+                                Hola
+                            </h3>
+                            <div class="skill-description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quo officiis quos quis veritatis asperiores adipisci nemo eos iure necessitatibus.
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skills-image-container">
-                        <img src="/Images/OptimazedImages/Me.webp" alt="HTML Skill" fetchpriority="low" loading="lazy">
-                    </div>
-                    <div class="skill-description-container">
-                        <h3>
-                            Hola
-                        </h3>
-                        <div class="skill-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium distinctio optio mollitia blanditiis magnam consectetur sint itaque eligendi unde quos? Doloribus eius ut quas nihil impedit itaque minima facilis quasi!
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skills-image-container">
-                        <img src="/Images/OptimazedImages/Me.webp" alt="HTML Skill" fetchpriority="low" loading="lazy">
-                    </div>
-                    <div class="skill-description-container">
-                        <h3>
-                            Hola
-                        </h3>
-                        <div class="skill-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium distinctio optio mollitia blanditiis magnam consectetur sint itaque eligendi unde quos? Doloribus eius ut quas nihil impedit itaque minima facilis quasi!
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skills-image-container">
-                        <img src="/Images/OptimazedImages/Me.webp" alt="HTML Skill" fetchpriority="low" loading="lazy">
-                    </div>
-                    <div class="skill-description-container">
-                        <h3>
-                            Hola
-                        </h3>
-                        <div class="skill-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium distinctio optio mollitia blanditiis magnam consectetur sint itaque eligendi unde quos? Doloribus eius ut quas nihil impedit itaque minima facilis quasi!
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skills-image-container">
-                        <img src="/Images/OptimazedImages/Me.webp" alt="HTML Skill" fetchpriority="low" loading="lazy">
-                    </div>
-                    <div class="skill-description-container">
-                        <h3>
-                            Hola
-                        </h3>
-                        <div class="skill-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium distinctio optio mollitia blanditiis magnam consectetur sint itaque eligendi unde quos? Doloribus eius ut quas nihil impedit itaque minima facilis quasi!
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skills-image-container">
-                        <img src="/Images/OptimazedImages/Me.webp" alt="HTML Skill" fetchpriority="low" loading="lazy">
-                    </div>
-                    <div class="skill-description-container">
-                        <h3>
-                            Hola
-                        </h3>
-                        <div class="skill-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium distinctio optio mollitia blanditiis magnam consectetur sint itaque eligendi unde quos? Doloribus eius ut quas nihil impedit itaque minima facilis quasi!
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skills-image-container">
-                        <img src="/Images/OptimazedImages/Me.webp" alt="HTML Skill" fetchpriority="low" loading="lazy">
-                    </div>
-                    <div class="skill-description-container">
-                        <h3>
-                            Hola
-                        </h3>
-                        <div class="skill-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium distinctio optio mollitia blanditiis magnam consectetur sint itaque eligendi unde quos? Doloribus eius ut quas nihil impedit itaque minima facilis quasi!
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skills-image-container">
-                        <img src="/Images/OptimazedImages/Me.webp" alt="HTML Skill" fetchpriority="low" loading="lazy">
-                    </div>
-                    <div class="skill-description-container">
-                        <h3>
-                            Hola
-                        </h3>
-                        <div class="skill-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium distinctio optio mollitia blanditiis magnam consectetur sint itaque eligendi unde quos? Doloribus eius ut quas nihil impedit itaque minima facilis quasi!
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+                </section>
         </section>
 
         <form class="form-container">
@@ -335,7 +246,7 @@
 
 
     <!--Footer-->
-    <footer>
+    <footer class="footer-container">
         <section class="footer-section-container">
             <div class="author" id="author">
                 <h2 class="footer-title">Leo_Gomez run dev</h2>
