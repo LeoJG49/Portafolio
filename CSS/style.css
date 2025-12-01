@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: monospace;
 }
 
 
@@ -61,6 +60,7 @@ header {
   width: 95%;
   height: 7vh;
   border-radius: 15px;
+  font-family: monospace;
   border: 1px solid var(--tertiary-bg);
   background-color: rgba(0, 0, 0, .5);
   backdrop-filter: blur(5px);
@@ -137,6 +137,7 @@ header {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      font-family: monospace;
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
       border-radius: 50px;
@@ -243,9 +244,10 @@ header {
 
     .form-container {
       width: 90%;
-      height: 35%;
+      height: 75vh;
       position: relative;
       overflow: hidden;
+      font-family: monospace;
     }
 }
 
@@ -325,48 +327,32 @@ header {
 }
 
 /*Correct The Font Family Of The Skill Title*/
-
-.skill-title {
-  font-family: "Vina Sans", sans-serif;
-}
-
 .skill-title span {
   display: inline-block;
   font-family: "Vina Sans", sans-serif;
-  letter-spacing: 5px;
 }
 
-.skills-section-container {
+.card{
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+}
 
-    .fill{
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .skill-card {
-      width: 90%;
-      height: 90vh;
-      padding: 10px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      position: relative;
-      background-color: var(--primary-bg);
-      color: var(--primary-text-color);
-      border-radius: 20px;
-      box-shadow:  -10px -5px 20px #060606,
-      10px 5px 20px #181818;
-    }
+.skill-card {
+  width: 90%;
+  height: 90vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  background-color: var(--primary-bg);
+  color: var(--primary-text-color);
+  border-radius: 20px;
+  box-shadow:  -10px -5px 20px #060606,
+  10px 5px 20px #181818;
 }
 
 .skills-image-container {
@@ -382,6 +368,7 @@ header {
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  font-family: monospace;
     h3 {
       margin-bottom: 15px;
     }
@@ -459,7 +446,7 @@ header {
 /*Editor Wrapper*/
 .input-container {
   width: 60%;
-  height: 95%;
+  height: auto;
   border-radius: 7.5px;
   background-color: #000;
   color: var(--primary-text-color);
@@ -494,14 +481,16 @@ header {
     }
 
     textarea {
-      width: 100%;
+      min-width: 100%;
       max-width: 100%;
-      height: 150px;
+      min-height: 150px;
+      max-height: 150px;
       padding: 5px;
       border: none;
       outline: none;
       border-radius: 3.75px;
       transition: all .2s ease;
+      
     }
 
     button {
@@ -515,9 +504,9 @@ header {
     }
 
     button:hover {
-      transform: scale(1.1);
+      transform: scale(1.02);
       cursor: pointer;
-      box-shadow: 0 2px 5px 2px #fff;
+      box-shadow: 0 1px 10px 0 #fff;
     }
 }
 
@@ -545,9 +534,10 @@ footer {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      font-family: monospace;
       background: linear-gradient(45deg, #0e0e0e, #101010);
-      box-shadow:  20px -20px 60px #060606,
-      -20px 20px 60px #181818;
+      box-shadow:  10px -10px 30px #060606,
+      -10px 10px 30px #181818;
       color: var(--primary-text-color);
     }
 }
@@ -557,6 +547,12 @@ footer {
   margin-left: 20px;
 }
 
+.copyright {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .social-media {
   width: 10%;
