@@ -2,10 +2,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".form-container");
-    const lastCard = document.querySelector(".fill.scroll");
-    const pinnedSections = document.querySelectorAll(".pinned");
-    //TODO
-    //Fixed the bug of the last skill-card that doesn't make the animation correctly.
+    const lastCard = document.querySelector(".card.scroll");
+    const pinnedSections = gsap.utils.toArray(".pinned");
+
     pinnedSections.forEach((section, index, sections) => {
         let cards = section.querySelector(".skill-card");
 
@@ -21,11 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 end: index === sections.length ? `+=${lastCard.offsetHeight / 2}` : form.offsetTop - window.innerHeight,
                 pin: true,
                 pinSpacing: false,
-                scrub: 1,
-                
+                scrub: 1,       
             }
         })
-        //Image Scale Animation When Is Going Behind the Next Image
         gsap.fromTo(cards,{scale: 1}, {
             scale: .5,
             ease: "none",
