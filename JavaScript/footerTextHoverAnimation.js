@@ -1,24 +1,6 @@
 const title = new SplitType('.footer-title', {types: "words, chars"});
 
-title.chars.forEach((char, index) => {
-    
-    let charsTl = gsap.timeline();
-
-    charsTl.from(char, {
-        y: gsap.utils.random(-150, 150),
-        x: gsap.utils.random(-150, 150),
-        rotate: gsap.utils.random(-360, 360),
-        opacity: 0,
-        duration: 1.5,
-        ease: "back.out",
-        delay: index * 0.01,
-    })
-
-    charsTl.from(char, {
-        color: `rgb(${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)})`,
-        duration: 1,
-    }, "-=.5")
-
+title.chars.forEach((char) => {
     char.addEventListener("mouseenter", charsHover);
 
     function charsHover() {
