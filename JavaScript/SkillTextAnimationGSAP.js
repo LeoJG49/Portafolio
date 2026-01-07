@@ -12,10 +12,10 @@ document.fonts.ready.then(() => {
         wordsClass: "word",
         linesClass: "line",
         autoSplit: true,
-        mask: "lines",
+        mask: "words",
         onSplit: (self) => {
-            split = gsap.from(self.lines, {
-                y: 115,
+            split = gsap.from(self.words, {
+                y: 120,
                 duration: 1,
                 opacity: 0,
                 stagger: .1,
@@ -27,5 +27,5 @@ document.fonts.ready.then(() => {
             })
             return split;
         }
-    }, 200)
+    })
 })
