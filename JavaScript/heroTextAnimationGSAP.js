@@ -13,14 +13,11 @@ document.fonts.ready.then(() => {
         mask: "words",
         onSplit: (self) => {
             split = gsap.from(self.words, {
-                delay: .5,
-                y: 100,
-                duration: 1,
+                y: 120,
+                duration: 1.2,
                 opacity: 0,
-                stagger: .05,
-                ease: "power4.out",
-                // repeat: -1,
-                // yoyo: true,
+                stagger: .09,
+                ease: "back.inOut",
             })
             return split;
         }
