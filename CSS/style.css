@@ -114,98 +114,88 @@ header {
   margin-right: 10px;
 }
 
-/*HERO Style*/
 
+/*HERO Style*/
 .hero {
   width: 100%;
   height: 100vh;
   position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-
-    .text-container {
-      width: 45%;
-      height: 80%;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-family: monospace;
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      border-radius: 50px;
-      background: linear-gradient(45deg, #0e0e0e, #101010);
-      box-shadow:  20px -20px 60px #060606,
-      -20px 20px 60px #181818;    
-    }
-
-    .image-container {
-      width: 45%;
-      height: 80%;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background-color: rgba(0, 0, 0, .5);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      border-radius: 50px;
-      background: linear-gradient(315deg, #0e0e0e, #101010);
-      box-shadow:  -20px -20px 60px #060606,
-      20px 20px 60px #181818;
-    }
 }
 
-.title-container, .paragraph-container {
-  width: 70%;
-  padding: 10px;
-  color: var(--primary-text-color);
+.hero-container {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+  background: linear-gradient(45deg, #0e0e0e, #101010);
+  box-shadow:  10px -10px 30px #060606,
+  -10px 10px 30px #181818;   
+}
+
+.text-container {
+  width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-.title {
-  margin-bottom: 30px;
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  font-size: var(--large-font-size);
-  border-right: 0.3em solid green;
-  -webkit-animation: 
-  typeAndDelete 4s steps(18) infinite,
-  blinkCursor 0.5s step-end infinite alternate;
-  animation:
-  typeAndDelete 4s steps(18) infinite,
-  blinkCursor 0.5s step-end infinite alternate;
-}
+    .title {
+      width: max-content;
+      font-size: var(--large-font-size);
+      color: var(--primary-text-color);
+      text-transform: uppercase;
+      font-family: monospace;
+      margin-bottom: 2rem;
+      border-right: 0.3em solid green;
+      overflow: hidden;
+      white-space: nowrap;
+      -webkit-animation: 
+      typeAndDelete 4s steps(18) infinite,
+      blinkCursor 0.5s step-end infinite alternate;
+      animation:
+      typeAndDelete 4s steps(18) infinite,
+      blinkCursor 0.5s step-end infinite alternate;
+    }
 
-.paragraph {
-  font-size: var(--large-font-size);
-}
+    .paragraph {
+      width: 75%;
+      font-size: 1.2rem;
+      color: var(--primary-text-color);
+      text-align: center;
+      line-height: 1.5;
+      font-family: monospace;
+      text-align: justify;
+    }
 
-.image-section {
-  width: 45%;
-  height: 75%;
-  border-radius: 50px;
-  background: linear-gradient(315deg, #0e0e0e, #101010);
-  box-shadow:  -20px -20px 60px #060606,
-  20px 20px 60px #181818;
-
-    img {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        background-repeat: no-repeat;
-        object-fit: cover;
+    .paragraph span {
+      display: inline-block;
     }
 }
+
+.image-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+    img {
+      width: 50%;
+      height: 70%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+}
+
 
 /*Main Section Style*/
 .main-section {
@@ -288,7 +278,7 @@ header {
   cursor: pointer;
 }
 
-/*Skill Title Section*/
+/*Project Title Section*/
 .skill-title-container {
   width: 100%;
   height: 100vh;
@@ -301,7 +291,6 @@ header {
   overflow: hidden;
 }
 
-/*Correct The Font Family Of The Skill Title*/
 .skill-title span {
   display: inline-block;
   font-family: "Vina Sans", sans-serif;
@@ -322,9 +311,10 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1500px;
+  width: 80%;
   height: 700px;
-  border-radius: 20px;
+  border-radius: 50px;
+  overflow: hidden;
 
     img {
       width: 100%;
@@ -333,20 +323,8 @@ header {
     }
 }
 
-/* .skill-card {
-  width: 90%;
-  height: 90vh;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: relative;
-  background-color: var(--primary-bg);
-  color: var(--primary-text-color);
-  border-radius: 20px;
-  box-shadow:  -10px -5px 20px #060606,
-  10px 5px 20px #181818;
-} */
+
+
 
 /*Footer Style*/
 footer {
