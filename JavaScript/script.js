@@ -5,6 +5,7 @@ import './footerTextHoverAnimation.js'
 import './heroTextAnimationGSAP.js'
 import './SkillAnimationGSAP.js'
 import './SkillTextAnimationGSAP.js'
+import './cardsAnimationGSAP.js'
 
 //Smooth Scroll
 
