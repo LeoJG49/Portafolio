@@ -304,6 +304,7 @@ header {
   background: linear-gradient(45deg, #0e0e0e, #101010);
   box-shadow:  10px -10px 30px #060606,
   -10px 10px 30px #181818;
+  cursor: pointer;
 }
 
 /* Wrapper que rota en 3D */
@@ -333,8 +334,18 @@ header {
 
 /* Cara trasera (rotada) */
 .back-content {
-  background-color: #ebebeb;
+  background-color: var(--primary-bg);
+  font-size: 1.6rem;
   transform: rotateY(180deg);
+  color: var(--primary-text-color);
+  text-align: justify;
+  height: auto;
+  padding: 40px;
+  letter-spacing: 1px;
+}
+
+.back-content span {
+  display: inline-block;
 }
 
 /*Project Title Section*/
