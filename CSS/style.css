@@ -44,9 +44,85 @@ li {
   list-style: none;
 }
 
+/*Preloader Animation*/
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--primary-bg);
+  color: var(--primary-text-color);
+  clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0 100%);
+  will-change: clip-path;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.preloader p {
+  color: var(--primary-text-color);
+}
+
+.preloader-revealer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%) scale(0);
+  aspect-ratio: 1;
+  background-color: var(--tertiary-bg);
+  will-change: transform;
+  z-index: 2;
+}
+
+.preloader-copy,
+.preloader-copy-col,
+.preloader-counter {
+  flex: 1;
+  display: flex;
+}
+
+.preloader-copy p {
+  width: 75%;
+}
+
+.preloader-counter {
+  justify-content: flex-end;
+}
+
+.line {
+  will-change: transform;
+  transform: translateY(100%);
+}
+
+/*Preloader Animation Responsive*/
+@media (max-width: 900px) {
+  .preloader,
+  .preloader-copy {
+    flex-direction: column;
+  }
+
+  .preloader-revealer {
+    width: 300%;
+  }
+
+  .preloader-copy-col {
+    align-items: center;
+  }
+
+  .preloader-copy p {
+    width: 100%;
+  }
+
+  .preloader-counter {
+    align-items: center;
+  }
+}
 
 /*Header Style*/
-
 header {
   width: 100%;
   height: 8vh;
@@ -55,10 +131,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  will-change: transform;
+  transform: translateY(-100px);
 }
 
 /*Nav Style*/
-
 .head-nav {
   width: 95%;
   height: 7vh;
@@ -127,6 +204,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  will-change: transform;
 }
 
 .hero-container {
@@ -150,6 +228,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  will-change: transform;
 
     .title {
       width: max-content;
@@ -191,6 +270,7 @@ header {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  will-change: transform;
 
     img {
       width: 50%;
@@ -398,9 +478,6 @@ header {
     }
 }
 
-
-
-
 /*Footer Style*/
 footer {
   width: 100%;
@@ -456,8 +533,6 @@ footer {
       transform: scale(1.2);
     }
 }
-
-
 
 /*Animations*/
 
