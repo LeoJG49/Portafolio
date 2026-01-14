@@ -1,5 +1,4 @@
-// Cards Animation - click + una abierta a la vez
-
+// Cards Animation
 const cards = document.querySelectorAll(".technologies-item");
 const timelines = new Map(); // para cerrar otras cuando una se abre
 
@@ -7,7 +6,7 @@ cards.forEach(card => {
   const inner = card.querySelector('.card-inner');
   const back = card.querySelector('.back-content');
 
-  // estados iniciales
+  // Estados iniciales
   gsap.set(back, { opacity: 0 });
   gsap.set(inner, { rotateY: 0 });
 
@@ -28,23 +27,23 @@ cards.forEach(card => {
 
   timelines.set(card, tl);
 
-  // click para alternar y cerrar otras
+  // Click para alternar y cerrar otras
   card.addEventListener('click', (e) => {
     e.stopPropagation();
 
-    // cerrar cualquier otra tarjeta abierta
+    // Cerrar cualquier otra tarjeta abierta
     timelines.forEach((otherTl, otherCard) => {
       if (otherCard !== card && !otherTl.reversed()) {
         otherTl.reverse();
       }
     });
 
-    // alternar esta tarjeta
+    // Alternar tarjeta
     tl.reversed() ? tl.play() : tl.reverse();
   });
 });
 
-// click fuera cierra todas
+// Click para cerrar todas
 document.addEventListener('click', () => {
   timelines.forEach((tl) => {
     if (!tl.reversed()) tl.reverse();
