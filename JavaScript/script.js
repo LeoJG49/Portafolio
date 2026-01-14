@@ -9,13 +9,17 @@ import './cardsAnimationGSAP.js'
 
 //Smooth Scroll
 
-const lenis = new Lenis()
-
-lenis.on('scroll', () => {})
-
-function raf(time) {
-    lenis.raf(time)
+function smoothScroll () {
+    const lenis = new Lenis()
+    
+    lenis.on('scroll', () => {})
+    
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+    
     requestAnimationFrame(raf)
 }
 
-requestAnimationFrame(raf)
+smoothScroll()
