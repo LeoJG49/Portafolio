@@ -48,13 +48,13 @@ export function initPageLoader() {
 
         const tl = gsap.timeline()
 
-        tl.to([".preloader-copy p .line", ".preloader-counter p .line"], {
+        tl.to([".preloader-copy", ".preloader-counter"], {
             y: "0%",
             duration: 1,
             stagger: 0.075,
             ease: "power3.out",
             delay: 1,
-        }, "<")
+        }, )
 
         .to(".preloader-revealer", {
             scale: 0.25,
