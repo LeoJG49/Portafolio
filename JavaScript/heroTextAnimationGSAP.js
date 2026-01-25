@@ -1,6 +1,4 @@
 export function initHeroTextAnimation() {
-    gsap.registerPlugin(SplitText)
-
     return new Promise((resolve) => {
         document.fonts.ready.then(() => {
             gsap.set(".paragraph", { opacity: 1, y: 0 });
