@@ -1,4 +1,4 @@
-//Main Text Animation
+//Skill Text Animation
 gsap.registerPlugin(ScrollTrigger)
 
 document.fonts.ready.then(() => {
@@ -23,8 +23,10 @@ document.fonts.ready.then(() => {
                     trigger: ".skill-title",
                     scrub: 1,
                     start: "top 80%",
+                    end: "top 30%",
                 }
             })
+            ScrollTrigger.refresh();
             return split;
         }
     })
