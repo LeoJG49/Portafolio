@@ -21,9 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 pin: true,
                 pinSpacing: false,
                 scrub: 1,
-                
             }
         })
+        //Optimazed the ScrollTrigger of the Animation
+        ScrollTrigger.refresh();
+        
         //Image Scale Animation When Is Going Behind the Next Image
         gsap.fromTo(img,{scale: 1}, {
             scale: .5,
