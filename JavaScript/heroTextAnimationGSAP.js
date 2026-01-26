@@ -21,6 +21,7 @@ export function initHeroTextAnimation() {
                             resolve()
                         }
                     })
+                    ScrollTrigger.refresh();
                     return split;
                 }
             })
