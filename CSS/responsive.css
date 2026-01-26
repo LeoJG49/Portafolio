@@ -102,6 +102,11 @@ Desktops 1601px and more
 
       .title {
         margin-bottom: 0;
+        width: auto;
+        max-width: 100%;
+        white-space: normal;
+        word-wrap: break-word;
+        padding: 0 10px;
       }
 
       .paragraph {
@@ -287,10 +292,13 @@ Desktops 1601px and more
     gap: 20px;
 
       .title {
-        width: 100%;
+        width: auto;
+        max-width: 100%;
         text-align: center;
         margin: 0;
         padding: 0 10px;
+        white-space: normal;
+        word-wrap: break-word;
       }
 
       .paragraph {
@@ -474,6 +482,13 @@ Desktops 1601px and more
     width: 60%;
     height: auto;
     margin-top: 30px;
+
+      .title {
+        width: auto;
+        max-width: 100%;
+        white-space: normal;
+        word-wrap: break-word;
+      }
 
       .paragraph {
         width: 80%;
