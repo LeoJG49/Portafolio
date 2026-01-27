@@ -1,7 +1,5 @@
 import './dinamicHeader.js'
 import './footerTextHoverAnimation.js'
-import './SkillAnimationGSAP.js'
-import './SkillTextAnimationGSAP.js'
 import './cardsAnimationGSAP.js'
 import { initPageLoader } from './pageLoadingAnimationGSAP.js'
 import { initHeroTextAnimation } from './heroTextAnimationGSAP.js'
