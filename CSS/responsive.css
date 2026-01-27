@@ -97,24 +97,61 @@ Desktops 1601px and more
 
   .text-container {
     width: 100%;
-    height: 20%;
-    margin-top: 30px;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 
       .title {
+        font-size: 1.4rem;
         margin-bottom: 0;
+        display: inline-block;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        -webkit-animation: 
+        typeAndDelete 4s steps(18) infinite,
+        blinkCursor 0.5s step-end infinite alternate;
+        animation:
+        typeAndDelete 4s steps(18) infinite,
+        blinkCursor 0.5s step-end infinite alternate;
       }
 
       .paragraph {
         width: 90%;
         text-align: justify;
-        line-height: 1;
+        line-height: 1.1;
         font-size: var(--medium-font-size);
       }
   }
 
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typeAndDelete {
+  0%,
+  10% {
+    width: 0;
+  }
+  45%,
+  55% {
+    width: 10.3em;
+  } /* adjust width based on content */
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
   .image-container {
-    width: 70%;
-    height: 30%;
+    width: 60%;
+    height: 40%;
 
       img {
         width: 100%;
@@ -159,25 +196,13 @@ Desktops 1601px and more
   }
 
   /*Project Title Section*/
-  .skill-title-container {
-    font-size: 3.5rem;
-    height: 30dvh;
-    justify-content: center;
-    align-items: start;
-  }
 
-  #project2 {
+  .skill-title-container {
     height: 40dvh;
   }
 
-  .skill-content {
-    width: 80%;
-    height: auto;
-    border-radius: 15px;
-
-      img {
-        object-fit: contain;
-      }
+  .skill-title {
+    font-size: 3.5rem;
   }
 
   /*Footer*/
@@ -271,7 +296,7 @@ Desktops 1601px and more
     border-radius: 30px;
     display: flex;
     flex-direction: column-reverse;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
     gap: 30px;
     padding: 40px 20px;
@@ -284,34 +309,32 @@ Desktops 1601px and more
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 
       .title {
-        width: 100%;
-        text-align: center;
         margin: 0;
-        padding: 0 10px;
       }
 
       .paragraph {
         width: 90%;
         text-align: justify;
-        line-height: 1.4;
+        line-height: 1.2;
         font-size: var(--normal-font-size);
       }
   }
 
   .image-container {
     width: 60%;
-    height: auto;
+    height: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
 
       img {
         width: 100%;
         height: auto;
-        border-radius: 20px;
       }
   }
 
@@ -369,22 +392,6 @@ Desktops 1601px and more
   .skill-title-container {
     font-size: 4rem;
     height: 30dvh;
-    justify-content: center;
-    align-items: start;
-  }
-
-  #project2 {
-    height: 40dvh;
-  }
-
-  .skill-content {
-    width: 90%;
-    height: auto;
-    border-radius: 15px;
-
-      img {
-        object-fit: cover;
-      }
   }
 
   /*Footer*/
@@ -475,17 +482,21 @@ Desktops 1601px and more
     height: auto;
     margin-top: 30px;
 
+      .title {
+        font-size: 1.8rem;
+      }
+
       .paragraph {
         width: 80%;
         text-align: justify;
-        line-height: 1;
+        line-height: 1.2;
         font-size: var(--normal-font-size);
       }
   }
 
   .image-container {
-    width: 35%;
-    height: 45%;
+    width: 30%;
+    height: 50%;
 
       img {
         width: 100%;
@@ -549,22 +560,8 @@ Desktops 1601px and more
     font-size: 6rem;
     height: 40vh;
     justify-content: center;
-    align-items: start;
   }
 
-  #project2 {
-    height: 62vh;
-  }
-
-  .skill-content {
-    width: 90%;
-    height: auto;
-    border-radius: 20px;
-
-      img {
-        object-fit: contain;
-      }
-  }
 
   /*Footer*/
   footer .footer-section-container {
@@ -727,22 +724,6 @@ Desktops 1601px and more
   .skill-title-container {
     font-size: 7.5rem;
     height: 60vh;
-    justify-content: center;
-    align-items: start;
-  }
-
-  #project2 {
-    height: 80vh;
-  }
-
-  .skill-content {
-    width: 80%;
-    height: 600px;
-    border-radius: 20px;
-
-      img {
-        object-fit: cover;
-      }
   }
 
   /*Footer*/
