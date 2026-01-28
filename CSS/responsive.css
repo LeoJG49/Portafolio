@@ -113,17 +113,17 @@ Desktops 1601px and more
         white-space: nowrap;
         overflow: hidden;
         -webkit-animation: 
-        typeAndDelete 4s steps(18) infinite,
+        typeAndDelete 4s steps(20) infinite,
         blinkCursor 0.5s step-end infinite alternate;
         animation:
-        typeAndDelete 4s steps(18) infinite,
+        typeAndDelete 4s steps(20) infinite,
         blinkCursor 0.5s step-end infinite alternate;
       }
 
       .paragraph {
         width: 80%;
-        text-align: justify;
-        white-space: wrap;
+        text-align: center;
+        letter-spacing: -0.5px;
         line-height: 1.1;
         font-size: var(--medium-font-size);
       }
@@ -142,7 +142,7 @@ Desktops 1601px and more
   }
   45%,
   55% {
-    width: 11.2em;
+    width: 11.5em;
   } /* adjust width based on content */
   90%,
   100% {
