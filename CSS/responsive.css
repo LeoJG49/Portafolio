@@ -121,8 +121,9 @@ Desktops 1601px and more
       }
 
       .paragraph {
-        width: 90%;
+        width: 80%;
         text-align: justify;
+        white-space: wrap;
         line-height: 1.1;
         font-size: var(--medium-font-size);
       }
@@ -141,7 +142,7 @@ Desktops 1601px and more
   }
   45%,
   55% {
-    width: 10.3em;
+    width: 11.2em;
   } /* adjust width based on content */
   90%,
   100% {
@@ -151,7 +152,7 @@ Desktops 1601px and more
 
   .image-container {
     width: 60%;
-    height: 40%;
+    height: 35%;
 
       img {
         width: 100%;
@@ -189,10 +190,6 @@ Desktops 1601px and more
     padding: 15px;
     text-align: center;
 
-  }
-
-  .git {
-    font-size: .85rem;
   }
 
   /*Project Title Section*/
@@ -384,10 +381,6 @@ Desktops 1601px and more
 
   }
 
-  .git {
-    font-size: .75rem;
-  }
-
   /*Project Title Section*/
   .skill-title-container {
     font-size: 4rem;
@@ -551,10 +544,6 @@ Desktops 1601px and more
 
   }
 
-  .git {
-    font-size: .85rem;
-  }
-
   /*Project Title Section*/
   .skill-title-container {
     font-size: 6rem;
@@ -714,10 +703,6 @@ Desktops 1601px and more
     padding: 15px;
     text-align: center;
 
-  }
-
-  .git {
-    font-size: 1.2rem;
   }
 
   /*Project Title Section*/
