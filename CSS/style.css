@@ -400,7 +400,7 @@ header {
   font-size: var(--normal-font-size);
   transform: rotateY(180deg);
   color: var(--primary-text-color);
-  text-align: justify;
+  text-align: center;
   height: auto;
   padding: 40px;
   letter-spacing: 1px;
