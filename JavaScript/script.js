@@ -13,12 +13,17 @@ async function init() {
 init()
 
 //Smooth Scroll
-if (window.innerWidth > 1201) {
-    const lenis = new Lenis()
-    lenis.on('scroll', () => {})
-    function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-    }
-    requestAnimationFrame(raf)
+let lenis;
+
+if (window.matchMedia('(min-width: 1200px)').matches) {
+  lenis = new Lenis({
+    smoothWheel: true,
+    smoothTouch: false
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
 }
