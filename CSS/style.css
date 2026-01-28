@@ -245,6 +245,7 @@ header {
 
     .paragraph span {
       display: inline-block;
+      margin-right: 0.25em;
     }
 }
 
